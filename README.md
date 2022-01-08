@@ -1,1 +1,1 @@
-# Recommender_Systems_Polimi
+# Recommender-Systems-Polimi
