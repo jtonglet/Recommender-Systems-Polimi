@@ -36,7 +36,7 @@ This repo contains the implementation of the following recommenders :
 - RP3Beta Graph Based models
 - Pure SVD and Implicit Alternating Least Squares models
 - Slim BPR 
-- [EASE^R Recommender](https://dl.acm.org/doi/pdf/10.1145/3308558.3313710)
+- [EASE<sup>R</sup> Recommender](https://dl.acm.org/doi/pdf/10.1145/3308558.3313710)
 - Final Hybrid Model
 
 The base recommenders come from the course [repository](https://github.com/MaurizioFD/RecSys_Course_AT_PoliMi).
