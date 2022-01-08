@@ -7,8 +7,20 @@ This repository contains the files and datasets used for a recommender system co
 
 
 
+## Recommenders
+<p align="justify">
+This repo contains the implementation of the following recommenders : 
+</p>
 
+- User based Collaborative Filtering
+- Item Content Based Filtering
+- RP3Beta Graph Based models
+- Pure SVD and Implicit Alternating Least Squares models
+- Slim BPR 
+- [EASE^R Recommender](https://dl.acm.org/doi/pdf/10.1145/3308558.3313710)
+- Final Hybrid Model
 
+The base recommenders come from the course [repository](https://github.com/MaurizioFD/RecSys_Course_AT_PoliMi).
 
 
 ## Cython
@@ -37,14 +49,6 @@ During the compilation <b>you may see some warnings</b>.
 python run_compile_all_cython.py
 ```
 
-## Visualization
-To see a plot of MAP@10 for the best model and the hybrids composing it on various user groups, you can run the following command:
-```
-python HybridFinalParall.py
-```
-<p align="justify">
-Note that the script tries to train in parallel as many recommenders as possible, and this may cause problems on machines with less than 16GB of RAM.
-</p>
   
 ## Final grades
 * 26 on 27 points
