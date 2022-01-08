@@ -6,7 +6,23 @@
 
 [![Kaggle](https://img.shields.io/badge/open-kaggle-blue)](https://www.kaggle.com/c/recommender-system-2021-challenge-polimi)
 
-This repository contains the files and datasets used for a recommender system competition hosted on Kaggle. 
+This repository contains the files and datasets used for the kaggle competition of the recommender systems course at Politecnico di Milano. The competition took place from November 2021 till January 2022. 
+
+
+## Overview
+<p align="justify">
+
+The application domain of the competition was TV show recommendation. Starting from a sparse User Rating Matrix with implicit feedback and an Item Content Matrix with information on the genre, subgenre and diffusion channels of each tv show. For each user, we had to provide 10 recommended TV shows. The quality of the recommender was evaluated with  the **MAP@10** metric.
+  
+</p>
+  
+## Best Model
+<p align="justify">
+  
+The final model used for the best submission is an 2-level hybrid recommeder which averages the prediction of six different base recommenders. The idea is that, if the composing models have all good performances and are different enough, the combined predictions will improve since different models are able to capture different aspects of the problem. The final hybrid is the results of several steps:
+
+</p>
+
 
 
 
