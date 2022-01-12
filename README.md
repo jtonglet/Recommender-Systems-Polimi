@@ -12,14 +12,14 @@ This repository contains the files and datasets used for the kaggle competition 
 ## Overview
 <p align="justify">
 
-The application domain of the competition was TV show recommendation. Starting from a sparse User Rating Matrix with implicit feedback and an Item Content Matrix with information on the genre, subgenre and diffusion channels of each tv show. For each user, we had to provide 10 recommended TV shows. The quality of the recommender was evaluated with  the **MAP@10** metric.
+The application domain of the competition was TV show recommendation. Starting from a sparse User Rating Matrix with implicit feedback and an Item Content Matrix with information on the genre, subgenre and diffusion channels of each tv show, we had to recommend 10 relevant TV shows for each user. The quality of the recommender was evaluated with  the **MAP@10** metric.
   
 </p>
   
 ## Best Model
 <p align="justify">
   
-The final model used for the best submission is an 2-level hybrid recommeder which averages the prediction of six different base recommenders. The idea is that, if the composing models have all good performances and are different enough, the combined predictions will improve since different models are able to capture different aspects of the problem. The final hybrid is the results of several steps:
+The final model used for the best submission is an 2-level hybrid recommender which averages the prediction of six different base recommenders. Please refer to the presentation [slide deck](https://github.com/jtonglet/Recommender-Systems-Polimi/blob/main/RecSys_2021.pdf) for more details.
 
 </p>
 
@@ -33,7 +33,7 @@ This repo contains the implementation of the following recommenders :
 
 - User based Collaborative Filtering
 - Item Content Based Filtering
-- RP3Beta Graph Based models
+- P3alpha and RP3Beta Graph Based models
 - Pure SVD and Implicit Alternating Least Squares models
 - Slim BPR 
 - [EASE<sup>R</sup> Recommender](https://dl.acm.org/doi/pdf/10.1145/3308558.3313710)
@@ -70,5 +70,5 @@ python run_compile_all_cython.py
 
   
 ## Final grades
-* 26 on 27 points
+* 26 out of  27 points
 * MAP@10 : 0.48549
