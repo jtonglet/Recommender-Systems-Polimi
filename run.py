@@ -1,24 +1,18 @@
 ################################## IMPORTS ##################################
 
-from Utils.Evaluator import EvaluatorHoldout
-from Utils.DataSplitter import DataSplitter
 from Utils.DataReader import DataReader
-from Massive_Hybrid import Massive
-from Recommenders.EASE_R_Recommender import EASE_R_Recommender
-from Recommenders.IALSRecommender import IALSRecommender
-from Recommenders.SLIM_BPR.Cython.SLIM_BPR_Cython import SLIM_BPR_Cython
+from Hybrid import Hybrid
 from tqdm import tqdm
 from time import time
 
 ################################# READ DATA #################################
+
 reader = DataReader()
 splitter = DataSplitter()
-URM = reader.load_urm2() 
+URM = reader.load_urm_sps() 
 ICM_channel = reader.load_icm_channel()
-ICM_genre = reader.load_icm_genre()
 ICM_subgenre = reader.load_icm_subgenre()
 targets = reader.load_target()
-
 
 ####################### ISTANTIATE AND FIT THE HYBRID #######################
 
