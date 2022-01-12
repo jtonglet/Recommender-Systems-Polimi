@@ -28,18 +28,18 @@ The final model used for the best submission is an 2-level hybrid recommender wh
 
 ## Recommenders
 <p align="justify">
-This repo contains the implementation of the following recommenders : 
+This repo contains the implementation of the following base recommenders : 
 </p>
 
 - User based Collaborative Filtering
 - Item Content Based Filtering
 - P3alpha and RP3Beta Graph Based models
-- Pure SVD and Implicit Alternating Least Squares models
+- Pure SVD 
+- iALS 
 - Slim BPR 
 - [EASE<sup>R</sup> Recommender](https://dl.acm.org/doi/pdf/10.1145/3308558.3313710)
-- Final Hybrid Model
 
-The base recommenders come from the course [repository](https://github.com/MaurizioFD/RecSys_Course_AT_PoliMi).
+The recommenders come from the course [repository](https://github.com/MaurizioFD/RecSys_Course_AT_PoliMi).
 
 
 ## Cython
