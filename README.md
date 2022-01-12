@@ -4,7 +4,7 @@
 </p>
 
 
-[![Kaggle](https://img.shields.io/badge/open-kaggle-blue)](https://www.kaggle.com/c/recommender-system-2021-challenge-polimi)
+[![Kaggle](https://img.shields.io/badge/closed-kaggle-blue)](https://www.kaggle.com/c/recommender-system-2021-challenge-polimi)
 
 This repository contains the files and datasets used for the kaggle competition of the recommender systems course at Politecnico di Milano. The competition took place from November 2021 till January 2022. 
 
