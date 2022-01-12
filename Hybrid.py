@@ -63,9 +63,10 @@ class Hybrid(BaseRecommender):
         
         self.EASE_R.fit()
         
-        self.IALS.fit(num_factors = 34)
+        self.IALS.fit(num_factors = 34,
+                     alpha = 0.69)
         
-        self.SLIM.fit(   )
+        self.SLIM.fit(l1_norm = 0.05, l2_norm = 0.5)
         
         self.RP3.fit(alpha = 0.775,
                      beta = 0.495 , 
@@ -76,7 +77,8 @@ class Hybrid(BaseRecommender):
                     shrink =34,
                     similarity = 'jaccard')
         
-       
+      
+    
     def _compute_item_score(self,
                             user_id_array, 
                             items_to_compute = None
