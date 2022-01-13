@@ -46,6 +46,7 @@ The recommenders come from the course [repository](https://github.com/MaurizioFD
 
 <p align="justify">
 This repository requires Python 3.8. Requirements and dependencies can be installed using the following command.
+  
  ```
  pip install -r requirements.txt
  ```
