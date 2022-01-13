@@ -42,7 +42,15 @@ This repo contains the implementation of the following base recommenders :
 The recommenders come from the course [repository](https://github.com/MaurizioFD/RecSys_Course_AT_PoliMi).
 
 
-## Cython
+## Installation
+
+<p align="justify">
+This repository requires Python 3.8. Requirements and dependencies can be installed using the following command.
+ ```
+ pip install -r requirements.txt
+ ```
+  </p>
+
 <p align="justify">
 Some of the models use Cython implementations. As written in the original repository you have to <b>compile all Cython algorithms</b>. 
 In order to compile you must first have installed: gcc and python3 dev. Under Linux those can be installed with the following commands:
