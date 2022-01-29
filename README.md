@@ -19,7 +19,7 @@ The application domain of the competition was TV show recommendation. Starting f
 ## Best Model
 <p align="justify">
   
-The final model used for the best submission is an 2-level hybrid recommender which averages the prediction of six different base recommenders. Please refer to the presentation [slide deck](https://github.com/jtonglet/Recommender-Systems-Polimi/blob/main/RecSys_2021.pdf) for more details.
+The final model is a 2-level hybrid recommender which averages the prediction of six different base recommenders. Please refer to the presentation [slide deck](https://github.com/jtonglet/Recommender-Systems-Polimi/blob/main/RecSys_2021.pdf) for more details.
 
 </p>
 
