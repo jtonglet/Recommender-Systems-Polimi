@@ -79,5 +79,5 @@ python run_compile_all_cython.py
 
   
 ## Final grades
-* 30 out of 30 points
+* 30 out of 30
 * MAP@10 : 0.48549
