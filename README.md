@@ -12,7 +12,7 @@ This repository contains the files and datasets used for the kaggle competition 
 ## Overview
 <p align="justify">
 
-The application domain of the competition was TV show recommendation 📺. Starting from a sparse User Rating Matrix with implicit feedback and an Item Content Matrix with information on the genre, subgenre and diffusion channels of each tv show, we had to recommend 10 relevant TV shows for each user. The quality of the recommender was evaluated with  the **MAP@10** metric.
+The application domain of the competition was TV show recommendation. Starting from a sparse User Rating Matrix with implicit feedback and an Item Content Matrix with information on the genre, subgenre and diffusion channels of each tv show, we had to recommend 10 relevant TV shows for each user. The quality of the recommender was evaluated with  the **MAP@10** metric.
   
 </p>
   
