@@ -8,7 +8,6 @@ from Recommenders.SLIM_BPR_Cython import SLIM_BPR_Cython
 from Recommenders.RP3betaRecommender import RP3betaRecommender
 from Recommenders.UserKNNCFRecommender import UserKNNCFRecommender
 
-
 ################################## IMPORT LIBRARIES ##################################
 
 from numpy import linalg as LA
@@ -30,23 +29,20 @@ class Hybrid(BaseRecommender):
         self.URM_aug = sps.vstack([self.URM_train, ICM_channel.T, ICM_subgenre.T])
         
         
-
     def fit(self,  
             lambda1 = 10, 
             lambda2 = 1, 
             lambda3 = 1, 
             lambda4 = 1,
             lambda5 = 1, 
-            ):
-      
+            ):      
+        
         self.lambda1 = lambda1
         self.lambda2 = lambda2
         self.lambda3 = lambda3
         self.lambda4 = lambda4   
         self.lambda5 = lambda5
-
-
-        
+      
         # Instantiate the recommenders     
         self.ItemCBF = ItemKNNCBFRecommender(self.URM_train, self.ICM_channel)
         self.EASE_R = EASE_R_Recommender(self.URM_aug)
@@ -54,31 +50,24 @@ class Hybrid(BaseRecommender):
         self.SLIM = SLIM_BPR_Cython(self.URM_aug)
         self.RP3 = RP3betaRecommender(self.URM_aug)
         self.CF = UserKNNCFRecommender(self.URM_aug)
-                                                    
-                                              
+                                                                                                
         self.ItemCBF.fit(topK = 7000, 
                          shrink =  10000, 
                          similarity = 'jaccard', 
-                         feature_weighting = 'tfidf')
-        
-        self.EASE_R.fit()
-        
+                         feature_weighting = 'tfidf')        
+        self.EASE_R.fit()       
         self.IALS.fit(num_factors = 34,
-                     alpha = 0.69)
-        
-        self.SLIM.fit(l1_norm = 0.05, l2_norm = 0.5)
-        
+                     alpha = 0.69)       
+        self.SLIM.fit(l1_norm = 0.05, l2_norm = 0.5)      
         self.RP3.fit(alpha = 0.775,
                      beta = 0.495 , 
                      implicit = True, 
-                     topK = 111)
-        
+                     topK = 111)     
         self.CF.fit(topK = 432, 
                     shrink =34,
                     similarity = 'jaccard')
         
       
-    
     def _compute_item_score(self,
                             user_id_array, 
                             items_to_compute = None
@@ -111,8 +100,5 @@ class Hybrid(BaseRecommender):
             w = self.lambda1 * w12 + self.lambda2 *w3 + self.lambda3 * w4 + self.lambda4 * w5 + self.lambda5 * w6
                         
             item_weights[i,:] = w 
-            
-            
+                        
         return item_weights
-    
-    
